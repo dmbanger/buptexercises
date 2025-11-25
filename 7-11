@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+	int num1,num2,cal1,cal2,num3,n;
+	cal1=0;
+	cal2=0;
+	num1,num2=0;
+	num3=0;
+	while(1){
+		scanf("%d",&n);
+		if(n==-1){
+			break;
+		}else if(n==0){
+			num3++;
+		}else if(n>0){
+			num1++;
+			cal1+=n;
+		}else if(n<0){
+			num2++;
+			cal2+=n;
+		}
+	}
+	printf("%d %d %d\n%d %d",num1,num3,num2,cal1,cal2);
+} 7-11
