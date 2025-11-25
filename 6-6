@@ -1,0 +1,13 @@
+int judgeTriangle(int a,int b,int c){
+    if((long long)a+(long long)b<=(long long)c||(long long)a+(long long)c<=(long long)b||(long long)b+(long long)c<=a){
+        return -1;
+    }else if((long long)a*(long long)a+(long long)b*(long long)b==(long long)c*(long long)c||(long long)a*(long long)a+(long long)c*(long long)c==(long long)b*(long long)b||(long long)b*(long long)b+(long long)c*(long long)c==(long long)a*(long long)a){
+        return 1;
+    }else if(a==b&&b==c){
+        return 3;
+    }else if(a==b||b==c||a==c){
+        return 2;
+    }else{
+        return 0;
+    }
+}
