@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<math.h>
+int prime(int a){
+	if(a==2){
+		return 1;
+	}if(a<=1||a%2==0){
+		return 0;
+	}else{
+		for(int i=3;i<=sqrt(a);i+=2){
+			if(a%i==0){
+				return 0;
+			}
+		}
+		return 1;
+	}
+}
+int main(){
+	int a,b;
+	int cal=-1;
+	int c[500];
+	scanf("%d %d",&a,&b);
+	for(int i=a;i<b;i++){
+		if(prime(i)==1&&i!=a){
+			cal++;
+			c[cal]=i;
+		}
+	}
+	if(cal==-1||a>=b){
+		printf("error");
+	}else{
+		for(int j=0;j<=cal;j++){
+			printf("%d",c[j]);
+			if(j!=cal){
+				printf(" ");
+			}
+		}
+	}
+	return 0;
+}
