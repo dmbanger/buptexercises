@@ -1,0 +1,16 @@
+#include <stdio.h>
+int is_leap(int year) {
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+}
+int main() {
+    int year, month;
+    int days;
+    int days_month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    scanf("%d %d", &year, &month);
+    days = days_month[month];
+    if (month == 2 && is_leap(year)) {
+        days = 29;
+    }
+    printf("%d\n", days);
+    return 0;
+}
