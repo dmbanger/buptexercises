@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+	int n;
+	scanf("%d",&n);
+	int sum=0;
+	int k;
+	for(int i=1;i*3<=n;i++){
+		for(int j=i;j*2<=n-i;j++){
+			k=n-i-j;
+			if(i+j>k){
+				sum++;
+			}
+		}
+	}
+	printf("%d",sum);
+	return 0;
+}
