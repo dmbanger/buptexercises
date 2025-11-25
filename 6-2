@@ -1,0 +1,9 @@
+int getDays(int year,int month){
+    int day1[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+    int day2[12]={31,29,31,30,31,30,31,31,30,31,30,31};
+    if(year%400==0||(year%4==0&&year%100!=0)){
+        return day2[month-1];
+    }else{
+        return day1[month-1];
+    }
+}
