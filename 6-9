@@ -1,0 +1,7 @@
+int countBinary(int n){
+	if(n/2!=0){
+		return 1+countBinary(n/2);
+	}else{
+		return 1;
+	}
+}
