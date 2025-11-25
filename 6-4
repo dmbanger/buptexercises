@@ -1,0 +1,18 @@
+int reverseNum(int n){
+    int i;
+    int m=n;
+    for(i=0;m!=0;i++){
+        m/=10;
+    }
+    int num=0;
+    int power=1;
+	for(int k=1;k<i;k++){
+		power*=10;
+	}
+    for(int j=i;j>0;j--){	
+        num+=(n%10)*power;
+        n/=10;
+		power/=10;
+    }
+    return num;
+}
