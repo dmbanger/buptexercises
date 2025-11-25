@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+	int a,b,c,d;
+	double e,f;
+	scanf("%d %d %d %d",&a,&b,&c,&d);
+	e=a*1.0/(a+b);
+	f=b*1.0/(a+b);
+	double g;
+	g=e*c+f*d;
+	printf("%.1f\n",g);
+	if(g-60.00>=0){
+		printf("pass");
+	}else{
+		printf("fail");
+	}
+	return 0;
+}
