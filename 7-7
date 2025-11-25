@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+double f(double x,double c){
+	return cos(2*x)*sqrt(x)-c;
+}
+double cut(double x1,double x2,double c){
+	double a=x1;
+	double b=x2;
+	double fa=f(a,c);
+	double fb=f(b,c);
+	if(fabs(fa)<0.00001){
+		return a;
+	}if(fabs(fb)<0.00001){
+		return b;
+	}
+	double mid;
+	mid=(a+b)/2;
+	if(f(a,c)*f(mid,c)<0){
+		return cut(a,mid,c);
+	}else{
+		return cut(mid,b,c);
+	}
+}
+int main(){
+	double x1,x2,c;
+	scanf("%lf %lf %lf",&c,&x1,&x2);
+	double ans=cut(x1,x2,c);
+	printf("%.4lf",ans);
+	return 0;
+} 
