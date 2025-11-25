@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+	float f,ft;
+	char c;
+	scanf("%f %c",&f,&c);
+	if(c=='C'){
+		if(f<-273.15){
+			printf("Invalid");
+		}else{
+			printf("%.2f F",f*1.8+32);
+		}
+	}else{
+		ft=(f-32.00)/1.80;
+		if(ft<-273.15){
+			printf("Invalid");
+		}else{
+			printf("%.2f C",ft);
+		}
+	}
+	return 0;
+}
