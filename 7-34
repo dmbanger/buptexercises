@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main(){
+	int mine[9][9];
+	int n;
+	for(int i=0;i<9;i++){
+		for(int j=0;j<9;j++){
+			scanf("%d",&mine[j][i]);
+		}
+	}
+	scanf("%d",&n);
+	int r,c;
+	int sum=0;
+	for(int i=0;i<n;i++){
+		scanf("%d %d",&r,&c);
+		for(int j=r-1;j<=r+1;j++){
+			if(j>0&&j<10){
+				for(int k=c-1;k<=c+1;k++){
+					if(k>0&&k<10){
+						if(mine[k-1][j-1]==1){
+							sum++;
+						}
+					}
+				}
+			}
+		}
+		printf("%d\n",sum);
+		sum=0;
+	}
+	return 0;
+}
