@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+	int a,b;
+	scanf("%d %d",&a,&b);
+	int t;
+	int flag=0;
+	int i;
+	for(i=0;i<a;i++){
+		scanf("%d",&t);
+		if(t==b){
+			flag=1;
+			break;
+		}
+	}
+	if(flag==1){
+		printf("%d",i);
+	}else{
+		printf("Not Found");
+	}
+	return 0;
+} 
