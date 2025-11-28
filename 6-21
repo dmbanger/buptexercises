@@ -1,0 +1,31 @@
+void selectSort(int data[],int elementCount){
+	int temp;
+	int min;
+	for(int i=0;i<elementCount-1;i++){
+		min=findMin(data,i,elementCount-1);
+		temp=data[i];
+		data[i]=data[min];
+		data[min]=temp;
+		outputData(data,elementCount);
+	}
+}
+int findMin(int data[], int startLoc, int endLoc){
+	int min=data[startLoc];
+	int r=startLoc;
+	for(int i=startLoc;i<=endLoc;i++){
+		if(min>data[i]){
+			r=i;
+			min=data[i];
+		}
+	}
+	return r;
+}
+void outputData(int data[],int elementCount){
+	for(int i=0;i<elementCount;i++){
+		if(i!=elementCount-1){
+			printf("%d ",data[i]);
+		}else{
+			printf("%d\n",data[i]);
+		}
+	}
+}
